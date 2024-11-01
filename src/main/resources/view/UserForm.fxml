@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="786.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserFormController">
+   <children>
+      <AnchorPane fx:id="subRoot" prefHeight="786.0" prefWidth="1282.0" style="-fx-background-color: #E5E9ED;">
+         <children>
+            <Label layoutX="42.0" layoutY="23.0" prefHeight="22.0" prefWidth="314.0" text="Manage Users" textFill="#193b68">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSearch" layoutX="943.0" layoutY="25.0" onAction="#txtSearchOnAction" prefHeight="34.0" prefWidth="216.0" style="-fx-text-fill: #193b68;" />
+            <JFXButton layoutX="1156.0" layoutY="27.0" onAction="#btnSearchOnAction" prefHeight="33.0" prefWidth="62.0" style="-fx-border-color: #1479ff; -fx-border-radius: 5px;" text="Search" textFill="#193b68">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tblUser" layoutX="41.0" layoutY="296.0" onMouseClicked="#selectUserOnAction" prefHeight="450.0" prefWidth="1189.0" style="-fx-text-fill: #193b68;" stylesheets="@../Style/Style.css">
+               <columns>
+                  <TableColumn fx:id="colUserId" minWidth="0.0" prefWidth="147.20000839233398" text="User ID" />
+                  <TableColumn fx:id="colUserName" prefWidth="467.99998474121094" text="User name" />
+                  <TableColumn fx:id="colEmail" prefWidth="412.7999267578125" text="Email" />
+                  <TableColumn fx:id="colRemove" prefWidth="148.0" text="Delete user" />
+               </columns>
+            </TableView>
+            <Pane fx:id="userDetailsPane" layoutX="41.0" layoutY="85.0" prefHeight="170.0" prefWidth="563.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 10px;">
+               <children>
+                  <Label layoutX="22.0" layoutY="48.0" text="User Name" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="102.0" text="Email" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="7.0" prefHeight="22.0" prefWidth="123.0" text="User details" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="383.0" layoutY="111.0" onAction="#btnRemoveUserOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #1479FF;" text="Remove User" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <CheckBox fx:id="checkBoxNotify" layoutX="392.0" layoutY="88.0" mnemonicParsing="false" style="-fx-text-fill: #1479FF;" text="Notify when removed" />
+                  <Label fx:id="lblSetUserName" layoutX="21.0" layoutY="69.0" prefHeight="22.0" prefWidth="308.0" text="Sample user name" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSetEmail" layoutX="21.0" layoutY="124.0" prefHeight="22.0" prefWidth="333.0" text="Sample email" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUserId" layoutX="472.0" layoutY="10.0" prefHeight="17.0" prefWidth="66.0" text="Label" />
+                  <Pane fx:id="selectUserFromTablePane01" layoutX="5.0" layoutY="27.0" prefHeight="136.0" prefWidth="550.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <ImageView fitHeight="146.0" fitWidth="180.0" layoutX="356.0" layoutY="-5.0">
+                           <image>
+                              <Image url="@../assests/5778128_2945888-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="137.0" layoutY="27.0" text="Select user form table" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="bookDetailsPane" layoutX="655.0" layoutY="85.0" prefHeight="170.0" prefWidth="563.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 10px;">
+               <children>
+                  <Label layoutX="22.0" layoutY="48.0" text="User Name" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="102.0" text="Books to return" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="7.0" prefHeight="22.0" prefWidth="123.0" text="Books details" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="380.0" layoutY="111.0" onAction="#btnNotifyViaEmailOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #1479FF;" text="Notify User via Email" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="lblSetUserNameOnBooksDetailsPane" layoutX="22.0" layoutY="67.0" prefHeight="22.0" prefWidth="230.0" text="Sample user name" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSetBooksToReturn" layoutX="22.0" layoutY="122.0" prefHeight="22.0" prefWidth="148.0" text="00" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="171.0" layoutY="102.0" text="Due date" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSetDueDate" layoutX="171.0" layoutY="122.0" prefHeight="22.0" prefWidth="148.0" text="00.00.0000" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbBookName" layoutX="288.0" layoutY="61.0" onAction="#cmbBookNameOnAction" prefHeight="22.0" prefWidth="258.0" promptText="Select Book" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;" />
+                  <Label layoutX="288.0" layoutY="48.0" text="Book Name" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="selectUserFromTablePane02" layoutX="6.0" layoutY="25.0" prefHeight="146.0" prefWidth="550.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <ImageView fitHeight="159.0" fitWidth="155.0" layoutX="360.0" layoutY="-13.0">
+                           <image>
+                              <Image url="@../assests/24005145_6888606-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="149.0" layoutY="30.0" text="Select user form table" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

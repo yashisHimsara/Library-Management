@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="780.0" prefWidth="1530.0" style="-fx-background-color: #E5E9ED;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AdminDashboardFormController">
+   <children>
+      <AnchorPane prefHeight="787.0" prefWidth="254.0" style="-fx-background-color: #FCFCFC;">
+         <children>
+            <Label alignment="CENTER" layoutX="80.0" layoutY="19.0" text="BookWorm" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="30.0" layoutY="152.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 10px; -fx-background-color: #E5E9ED;">
+               <children>
+                  <ImageView fx:id="imgDashBoard" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../assests/icons8-dashboard-48%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblDashBoard" layoutX="90.0" layoutY="152.0" onMouseClicked="#lblDashBoardOnAction" prefHeight="35.0" prefWidth="74.0" text="Dashboard">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="30.0" layoutY="208.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 10px; -fx-background-color: #E5E9ED;">
+               <children>
+                  <ImageView fx:id="imgUsers" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../assests/icons8-users-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblUsers" layoutX="90.0" layoutY="208.0" onMouseClicked="#lblUsersOnAction" prefHeight="35.0" prefWidth="74.0" text="Users">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="29.0" layoutY="266.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 10px; -fx-background-color: #E5E9ED;">
+               <children>
+                  <ImageView fx:id="imgBooks" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../assests/icons8-books-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblBooks" layoutX="90.0" layoutY="266.0" onMouseClicked="#lblBooksOnAction" prefHeight="35.0" prefWidth="74.0" text="Books">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="30.0" layoutY="323.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 10px; -fx-background-color: #E5E9ED;">
+               <children>
+                  <ImageView fx:id="imgBranches" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../assests/icons8-houses-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblBranches" layoutX="90.0" layoutY="323.0" onMouseClicked="#lblBranchesOnAction" prefHeight="35.0" prefWidth="74.0" text="Branches">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="logOutPane" layoutX="41.0" layoutY="570.0" prefHeight="171.0" prefWidth="171.0" style="-fx-background-color: #1479FF;">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="41.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../assests/kisspng-computer-icons-magazine-share-icon-clip-art-5b3bda4b5f5f68.8338598215306491633907.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="22.0" layoutY="127.0" onAction="#btnLogOutOnAction" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #FFFFFF;" text="Log out">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="subRoot" layoutX="255.0" prefHeight="786.0" prefWidth="1282.0" style="-fx-background-color: #E9EDF1;">
+         <children>
+            <Pane fx:id="helloPane" layoutX="498.0" layoutY="81.0" prefHeight="242.0" prefWidth="722.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <ImageView fitHeight="277.0" fitWidth="277.0" layoutX="474.0" layoutY="-11.0">
+                     <image>
+                        <Image url="@../assests/6183516_3129481-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="30.0" layoutY="22.0" text="Hello, Admin!" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="30.0" layoutY="183.0" onAction="#btnSeeHistoryOnAction" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #1479FF;" text="See History" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="30.0" layoutY="67.0" prefHeight="16.0" prefWidth="478.0" text="Keep up the excellent work! Your dedication to organizing and assisting">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="90.0" prefHeight="16.0" prefWidth="478.0" text="patrons makes our library a welcoming and invaluable resource for our">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="112.0" prefHeight="16.0" prefWidth="478.0" text="community.">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="42.0" layoutY="23.0" text="Dashboard" textFill="#193b68">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="totalReadersPane" layoutX="40.0" layoutY="81.0" prefHeight="130.0" prefWidth="406.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <Label alignment="CENTER" layoutX="191.0" layoutY="26.0" text="Total Readers" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalReadersCount" alignment="CENTER" layoutX="223.0" layoutY="66.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="28.0">
+                     <image>
+                        <Image url="@../assests/icons8-book-reader-99.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="totalBooksPane" layoutX="40.0" layoutY="256.0" prefHeight="130.0" prefWidth="406.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <ImageView layoutX="25.0" layoutY="24.0">
+                     <image>
+                        <Image url="@../assests/icons8-books-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="196.0" layoutY="28.0" text="Total Books" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalBooksCount" alignment="CENTER" layoutX="223.0" layoutY="68.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="availableBooksPane" layoutX="40.0" layoutY="434.0" prefHeight="130.0" prefWidth="406.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <ImageView layoutX="26.0" layoutY="20.0">
+                     <image>
+                        <Image url="@../assests/icons8-books-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="186.0" layoutY="26.0" text="Availble Books" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAvailableBookCount" alignment="CENTER" layoutX="223.0" layoutY="69.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="totalBorrowedBooksPane" layoutX="40.0" layoutY="610.0" prefHeight="130.0" prefWidth="406.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <ImageView layoutX="30.0" layoutY="21.0">
+                     <image>
+                        <Image url="@../assests/icons8-books-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="148.0" layoutY="28.0" text="Today Barrowed Books" textFill="#193b68">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTodayBorrowedBooksCount" alignment="CENTER" layoutX="221.0" layoutY="68.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="categoryPane" layoutX="496.0" layoutY="362.0" prefHeight="379.0" prefWidth="722.0" style="-fx-background-radius: 10px; -fx-background-color: #FCFCFC;">
+               <children>
+                  <Pane layoutX="47.0" layoutY="46.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="36.0" layoutY="27.0" text="Romance" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRomanceCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="550.0" layoutY="46.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="43.0" layoutY="27.0" text="Trillers" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="42.0" text="and Horrors" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTrillersAndHorrorsCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="383.0" layoutY="46.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="41.0" layoutY="27.0" text="Fantacy" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="42.0" text="and Sciense" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFantacyAndScienceCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="216.0" layoutY="46.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="40.0" layoutY="27.0" text="Mystery" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMysteryCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="47.0" layoutY="210.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="27.0" text="Young Adult" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblYoungAdultCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="550.0" layoutY="210.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="32.0" layoutY="27.0" text="Biography," textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="19.0" layoutY="42.0" text="Autobiography," textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="57.0" text="and Memoir" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBiographyAndAutobiographyAndMemoirCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="383.0" layoutY="210.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="26.0" layoutY="27.0" text="Inspirational," textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="42.0" text="Self-help," textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="57.0" text="and Religious" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblInspirationalAndSelfHelpAndReligiousCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="216.0" layoutY="210.0" prefHeight="129.0" prefWidth="127.0" style="-fx-background-radius: 10px; -fx-border-color: #1479FF; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="15.0" layoutY="27.0" text="Children's fiction" textFill="#193b68">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblChildrensCount" alignment="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="21.0" prefWidth="56.0" text="00" textFill="#1479ff">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></Pane>
+            <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="1011.0" layoutY="25.0" prefHeight="18.0" prefWidth="208.0" text="20, february, 2024" textFill="#193b68">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Pane fx:id="UsersIconPane111" layoutX="30.0" layoutY="378.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 10px; -fx-background-color: #E5E9ED;">
+         <children>
+            <ImageView fx:id="imgHistory" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0">
+               <image>
+                  <Image url="@../assests/icons8-history-30%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lblHistory" layoutX="91.0" layoutY="378.0" onMouseClicked="#lblHistoryOnAction" prefHeight="35.0" prefWidth="155.0" text="History">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

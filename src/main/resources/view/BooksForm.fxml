@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="786.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.BooksFormController">
+   <children>
+      <AnchorPane fx:id="subRoot" prefHeight="786.0" prefWidth="1282.0" style="-fx-background-color: #E5E9ED;">
+         <children>
+            <Label layoutX="42.0" layoutY="23.0" prefHeight="22.0" prefWidth="314.0" text="Manage books" textFill="#193b68">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtTitle" layoutX="227.0" layoutY="137.0" prefHeight="34.0" prefWidth="255.0" promptText="Enter title of book" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="227.0" layoutY="119.0" prefHeight="22.0" prefWidth="145.0" text="Title" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAuthor" layoutX="521.0" layoutY="137.0" prefHeight="34.0" prefWidth="216.0" promptText="Enter author of book" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="521.0" layoutY="119.0" prefHeight="22.0" prefWidth="145.0" text="Author" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSearchBar" layoutX="943.0" layoutY="25.0" prefHeight="34.0" prefWidth="216.0" style="-fx-text-fill: #193b68;" />
+            <JFXButton layoutX="1156.0" layoutY="27.0" onAction="#btnSearchOnAction" prefHeight="33.0" prefWidth="62.0" style="-fx-border-color: #1479ff; -fx-border-radius: 5px;" text="Search" textFill="#193b68">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="782.0" layoutY="119.0" prefHeight="22.0" prefWidth="145.0" text="Genre" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbGenre" layoutX="782.0" layoutY="137.0" prefHeight="34.0" prefWidth="216.0" promptText="Select genre" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;" />
+            <TableView fx:id="tblBooks" layoutX="41.0" layoutY="296.0" onMouseClicked="#selectBookOnAction" prefHeight="450.0" prefWidth="1189.0" style="-fx-text-fill: #193b68;" stylesheets="@../Style/Style.css">
+              <columns>
+                <TableColumn fx:id="colBookId" minWidth="0.0" prefWidth="83.19997787475586" text="Book ID" />
+                <TableColumn fx:id="colTitle" prefWidth="366.3999786376953" text="Title" />
+                  <TableColumn fx:id="colAuthor" prefWidth="249.59994506835938" text="Author" />
+                  <TableColumn fx:id="colGenre" prefWidth="212.800048828125" text="Genre" />
+                  <TableColumn fx:id="colAvailability" prefWidth="140.0" text="Avalability" />
+                  <TableColumn fx:id="colRemove" prefWidth="124.7999267578125" text="Remove" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="1138.0" layoutY="217.0" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #1479ff;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1035.0" layoutY="217.0" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #1479ff;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="927.0" layoutY="218.0" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #1479ff;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="816.0" layoutY="218.0" onAction="#btnAddOnAction" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: #1479ff;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtBookId" layoutX="41.0" layoutY="137.0" prefHeight="34.0" prefWidth="146.0" promptText="Book ID (Auto generate)" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="41.0" layoutY="119.0" prefHeight="22.0" prefWidth="145.0" text="Book ID" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="1034.0" layoutY="119.0" prefHeight="22.0" prefWidth="145.0" text="Availability" textFill="#1479ff">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbAvailability" layoutX="1034.0" layoutY="137.0" prefHeight="34.0" prefWidth="182.0" promptText="Select availability" style="-fx-text-fill: #193b68; -fx-prompt-text-fill: #193b68;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
