@@ -1,8 +1,8 @@
 package com.example.dto;
 
 import lombok.*;
-import org.example.entity.Books;
-import org.example.entity.User;
+import com.example.entity.Books;
+import com.example.entity.User;
 
 import java.sql.Date;
 
