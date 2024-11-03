@@ -44,6 +44,5 @@ public class AdminLoginFormController {
         pane.getChildren().clear();
         pane.getChildren().add(FXMLLoader.load(getClass().getResource(location)));
     }
-
 }
 
